@@ -53,6 +53,7 @@ class FacePerceiverResampler(torch.nn.Module):
             )
 
     def forward(self, latents, x):
+
         x = self.proj_in(x)
         for attn, ff in self.layers:
             latents = attn(x, latents) + latents
