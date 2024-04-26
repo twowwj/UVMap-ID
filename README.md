@@ -3,9 +3,9 @@
 
 ## Results
 
-<img src="./imgs/test1.png" width="400"> 
-<img src="./imgs/test2.png" width="400"> 
-<img src="./imgs/test3.png" width="400"> 
+<img src="./imgs/test1.png" width="600"> 
+<img src="./imgs/test2.png" width="600"> 
+<img src="./imgs/test3.png" width="600"> 
 
 ## Rendering
 
