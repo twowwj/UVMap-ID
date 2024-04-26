@@ -7,11 +7,9 @@
 <img src="./imgs/test2.png" width="400"> 
 <img src="./imgs/test3.png" width="400"> 
 
-## Render
+## Rendering
 
-<img src="./imgs/dilireba.png" width="200"> |
-<img src="./imgs/dilireba2.png" width="200"> |
-<img src="./imgs/dilireba3.gif" width="200"> 
+<img src="./imgs/dilireba.png" width="200"> | <img src="./imgs/dilireba2.png" width="200"> | <img src="./imgs/dilireba3.gif" width="200"> 
 
 
 
