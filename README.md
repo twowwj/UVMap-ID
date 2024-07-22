@@ -1,6 +1,6 @@
 # UVMap-ID: A Controllable and Personalized UV Map Generative Model
 
-Weijing Wang$^\star$, [Jichao Zhang](https://scholar.google.com/citations?user=SPEECTIAAAAJ&hl=en)$^\star$$^\dagger$, 
+Weijing Wang $^\star$, [Jichao Zhang](https://scholar.google.com/citations?user=SPEECTIAAAAJ&hl=en) $\star$ $^\dagger$, 
 Chang Liu, [Xia Li](https://xialipku.github.io/), [Xingqian Xu](https://scholar.google.com/citations?user=s1X82zMAAAAJ&hl=en&oi=ao), 
 [Humphrey Shi](https://www.humphreyshi.com/), [Nicu Sebe](http://disi.unitn.it/~sebe/), [Bruno Lepri](https://scholar.google.com/citations?user=JfcopG0AAAAJ&hl=en&oi=ao)<br>
 $\star$: Equal Contribution, $\dagger$: Corresponding Author <br>
