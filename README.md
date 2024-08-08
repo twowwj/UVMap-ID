@@ -11,8 +11,6 @@ To solve the above problems, we introduce a novel method, UVMap-ID, which is a c
 To support the finetuning strategy, we introduce a small-scale attribute-balanced training dataset, including high-quality textures with labeled text and Face ID. 
 Additionally, we introduce some metrics to evaluate the multiple aspects of the textures. Finally, both quantitative and qualitative analyses demonstrate the effectiveness of our method in controllable and personalized UV Map generation. 
 
-
-
 ## [Paper](https://arxiv.org/abs/2404.14568) | [Video Youtube](https://www.youtube.com/watch?v=KCHUWPtBe9o)
 
 
@@ -31,6 +29,73 @@ Additionally, we introduce some metrics to evaluate the multiple aspects of the 
  ID            |           UV Map           |  SMPL render 
 :-------------------------:|:--------------------------:|:-------------------------:
 <img src="./imgs/dilireba.png" width="400">  | ![](./imgs/dilireba2.png) |  ![](./imgs/dilireba3.gif)
+
+
+
+## Environments
+
+```
+conda create -f environment.yml
+```
+Note: the important package is diffusers
+
+### Pretrained Model
+You can download [Unet](https://drive.google.com/file/d/1s887f2x2rYGVOVgwB-Tusas7CB1KQu2E/view?usp=drive_link) and [VAE](https://drive.google.com/file/d/1s887f2x2rYGVOVgwB-Tusas7CB1KQu2E/view?usp=drive_link)
+
+### Test
+
+```
+export MODEL_NAME="./simplitex-trained-model-ipa-lora_newdata_no_flag"
+export VAE_MODEL_PATH="./sd-vae-ft-mse"
+export OUTPUT_DIR="./output"
+
+celebrities=(
+"feifei li"
+"mi yang"
+"yuanyuan gao"
+)
+text_prompt=(
+        # "blonde hair"
+        # "bald head"
+        # "wearing colorful shirt"
+        # "wearing military soldier costume"
+        # "wearing white top, blue pants, glasses"
+        # "wearing white shirt, jeans, glasses"
+        # "wearing white shirt, jeans, white hat"
+        "is superhero"
+        # "wearing bussiness suit"
+        # "is policeman custom"
+        # "is santa claus costume"
+        # "wearing red clothes"
+        # "wearing blue clothes"
+        # "wearing casual suits"
+        # "bald head"
+        # "wearing green clothes"
+        # "wearing black clothes"
+        # "wearing white shirt and jeans"
+        # "is military soldier costume"
+        # "wearing sunglasses"
+        # "wearing santa claus costume"
+        # "wearing blue clothes"
+
+)
+
+for cele in "${celebrities[@]}"; do
+for prompt in "${text_prompt[@]}"; do
+
+        python test.py --pretrained_model_name_or_path=$MODEL_NAME  \
+                --vae_model_name_or_path=$VAE_MODEL_PATH \
+                --output_path=$OUTPUT_DIR  \
+                --instance_prompt="a sks texturemap of asian woman $prompt"  \
+                --resume_ckpt 1500 \
+                --num_inference_steps 50 \
+                --guidance_scale 5 \
+                --validation_images "./test/$cele/1.jpg" \
+                --validation_image_embeds "./test/$cele/1.npy" \
+
+done
+done
+```
 
 ### Citation
 
