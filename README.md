@@ -40,7 +40,7 @@ conda create -f environment.yml
 Note: the important package is diffusers
 
 ### Pretrained Model
-You can download [Unet](https://drive.google.com/file/d/1s887f2x2rYGVOVgwB-Tusas7CB1KQu2E/view?usp=drive_link) and [VAE](https://drive.google.com/file/d/1c7QQGw4D_Gkp00YZlRoP1KOcEuqDsDet/view?usp=sharing)
+You can download [Unet](https://drive.google.com/file/d/1jSDWlQ9Gc7rO2Er0fu0Re175Oiv7cVDb/view?usp=sharing) and [VAE](https://drive.google.com/file/d/1c7QQGw4D_Gkp00YZlRoP1KOcEuqDsDet/view?usp=sharing)
 
 ### Test
 
