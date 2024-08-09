@@ -45,7 +45,7 @@ You can download [Unet](https://drive.google.com/file/d/1jSDWlQ9Gc7rO2Er0fu0Re17
 ### Test
 
 ```
-export MODEL_NAME="./simplitex-trained-model-ipa-lora_newdata_no_flag"
+export MODEL_NAME="./unet"
 export VAE_MODEL_PATH="./sd-vae-ft-mse"
 export OUTPUT_DIR="./output"
 
